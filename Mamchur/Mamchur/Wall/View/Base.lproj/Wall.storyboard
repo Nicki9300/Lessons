@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Wall View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="WallViewController" customModule="Mamchur" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UNz-vN-28V">
+                                <rect key="frame" x="20" y="0.0" width="280" height="10"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="HBQ-Td-0UC"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mrJ-Zf-RnU">
+                                <rect key="frame" x="300" y="0.0" width="280" height="10"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="ndd-Ue-6AX"/>
+                                </constraints>
+                            </view>
+                            <tableView contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UMJ-zh-vaP">
+                                <rect key="frame" x="20" y="0.0" width="560" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="g0f-ch-o9i">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g0f-ch-o9i" id="6bU-Tv-5n1">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UMJ-zh-vaP" secondAttribute="trailing" constant="20" id="1Gr-aa-uN5"/>
+                            <constraint firstItem="UMJ-zh-vaP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4R6-pV-xoB"/>
+                            <constraint firstItem="mrJ-Zf-RnU" firstAttribute="top" secondItem="UMJ-zh-vaP" secondAttribute="top" id="6pH-Xu-Onh"/>
+                            <constraint firstItem="UNz-vN-28V" firstAttribute="top" secondItem="UMJ-zh-vaP" secondAttribute="top" id="Gpp-WW-0Rh"/>
+                            <constraint firstItem="mrJ-Zf-RnU" firstAttribute="trailing" secondItem="UMJ-zh-vaP" secondAttribute="trailing" id="MfJ-1k-VBk"/>
+                            <constraint firstItem="UNz-vN-28V" firstAttribute="trailing" secondItem="UMJ-zh-vaP" secondAttribute="centerX" id="NOo-oI-IOI"/>
+                            <constraint firstItem="mrJ-Zf-RnU" firstAttribute="leading" secondItem="UMJ-zh-vaP" secondAttribute="centerX" id="Xt9-dQ-Gbp"/>
+                            <constraint firstItem="UMJ-zh-vaP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dxA-on-wnX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UMJ-zh-vaP" secondAttribute="bottom" id="fcm-3M-RpR"/>
+                            <constraint firstItem="UNz-vN-28V" firstAttribute="leading" secondItem="UMJ-zh-vaP" secondAttribute="leading" id="igG-Dd-qtY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="leftViewForTopShadow" destination="UNz-vN-28V" id="s91-VE-f3p"/>
+                        <outlet property="rightViewForTopShadow" destination="mrJ-Zf-RnU" id="gz0-VW-Yl1"/>
+                        <outlet property="userTableView" destination="UMJ-zh-vaP" id="hy6-bJ-3Q4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-281" y="126"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
