@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class CustomTextFieldTableViewCell: UITableViewCell {
     
     @IBOutlet weak var infoLabel: UILabel!
@@ -35,10 +34,7 @@ class CustomTextFieldTableViewCell: UITableViewCell {
             infoTextField.isSecureTextEntry = false
         }
     }
-    
-    
-   
-    
+
 }
 
 extension CustomTextFieldTableViewCell: UITextFieldDelegate {

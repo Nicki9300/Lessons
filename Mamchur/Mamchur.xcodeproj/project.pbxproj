@@ -24,7 +24,7 @@
 		EB49CEAE25E914C7000276F5 /* UITableView(extension).swift in Sources */ = {isa = PBXBuildFile; fileRef = EB49CEAD25E914C7000276F5 /* UITableView(extension).swift */; };
 		EB49CEB125E91E60000276F5 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB49CEB025E91E60000276F5 /* UserData.swift */; };
 		EB65904525EFE59D00DEA03E /* Secitons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB65904425EFE59D00DEA03E /* Secitons.swift */; };
-		EB86A0AB25F0CF5F00828DD5 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB86A0AA25F0CF5F00828DD5 /* CustomTextField.swift */; };
+		EB86A36A25F10BE1006655CD /* UitextField(extension).swift in Sources */ = {isa = PBXBuildFile; fileRef = EB86A36925F10BE1006655CD /* UitextField(extension).swift */; };
 		EBA3635725EFE98E0033A05D /* CustomTextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA3634F25EFE98E0033A05D /* CustomTextFieldTableViewCell.swift */; };
 		EBA3635825EFE98E0033A05D /* HeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA3635025EFE98E0033A05D /* HeaderTableViewCell.xib */; };
 		EBA3635925EFE98E0033A05D /* ButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA3635325EFE98E0033A05D /* ButtonTableViewCell.xib */; };
@@ -55,7 +55,7 @@
 		EB49CEAD25E914C7000276F5 /* UITableView(extension).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView(extension).swift"; sourceTree = "<group>"; };
 		EB49CEB025E91E60000276F5 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		EB65904425EFE59D00DEA03E /* Secitons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secitons.swift; sourceTree = "<group>"; };
-		EB86A0AA25F0CF5F00828DD5 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		EB86A36925F10BE1006655CD /* UitextField(extension).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UitextField(extension).swift"; sourceTree = "<group>"; };
 		EBA3634F25EFE98E0033A05D /* CustomTextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		EBA3635025EFE98E0033A05D /* HeaderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderTableViewCell.xib; sourceTree = "<group>"; };
 		EBA3635325EFE98E0033A05D /* ButtonTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonTableViewCell.xib; sourceTree = "<group>"; };
@@ -183,6 +183,7 @@
 			children = (
 				EB49CEA925E9149D000276F5 /* UiView(extension).swift */,
 				EB49CEAD25E914C7000276F5 /* UITableView(extension).swift */,
+				EB86A36925F10BE1006655CD /* UitextField(extension).swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -192,7 +193,6 @@
 			children = (
 				EBA3634F25EFE98E0033A05D /* CustomTextFieldTableViewCell.swift */,
 				EBA3635525EFE98E0033A05D /* CustomTextFieldTableViewCell.xib */,
-				EB86A0AA25F0CF5F00828DD5 /* CustomTextField.swift */,
 			);
 			path = CustomTextField;
 			sourceTree = "<group>";
@@ -393,9 +393,9 @@
 				EB49CE9625E913FE000276F5 /* WithGreenImageTableViewCell.swift in Sources */,
 				EBA3635C25EFE98E0033A05D /* HeaderTableViewCell.swift in Sources */,
 				EB49CEAA25E9149D000276F5 /* UiView(extension).swift in Sources */,
+				EB86A36A25F10BE1006655CD /* UitextField(extension).swift in Sources */,
 				EB49CEAE25E914C7000276F5 /* UITableView(extension).swift in Sources */,
 				EB49CE7025E91220000276F5 /* SceneDelegate.swift in Sources */,
-				EB86A0AB25F0CF5F00828DD5 /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

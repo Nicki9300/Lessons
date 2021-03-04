@@ -17,13 +17,11 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    private var countTags = 0
-    private var countTF = 1
-
-    
     //MARK: Properties
     private var timer: Timer?
-   
+    private var countTags = 0
+    private var countTF = 1
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,15 +31,13 @@ class ProfileViewController: UIViewController {
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(self.longPress(gesture:)))
         longPress.minimumPressDuration = 0
         largeButton.addGestureRecognizer(longPress)
-
+        
         
         tableView.register(CustomTextFieldTableViewCell.self)
         tableView.register(ButtonTableViewCell.self)
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-      
         
     }
     
@@ -52,8 +48,6 @@ class ProfileViewController: UIViewController {
         updateProfilePictureButton.layer.borderColor = UIColor(named: "BorderButtonColor")?.cgColor
         
     }
-    
-
     
     // MARK: - Actions
     @objc func longPress(gesture: UILongPressGestureRecognizer) {
@@ -71,23 +65,17 @@ class ProfileViewController: UIViewController {
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
-//        if ((notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue) != nil {
-//
-//                self.view.frame.origin.y -= tableView.visibleCells[0].frame.height
-//
-//        }
-        
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-                if view.frame.origin.y == 0 {
-                    self.view.frame.origin.y -= keyboardSize.height - tableView.visibleCells[0].frame.height
-                }
+            if view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height - tableView.visibleCells[0].frame.height
             }
+        }
     }
-
+    
     @objc func keyboardWillHide(notification: NSNotification) {
         if view.frame.origin.y != 0 {
-                self.view.frame.origin.y = 0
-            }
+            self.view.frame.origin.y = 0
+        }
         
     }
     
@@ -130,7 +118,7 @@ extension ProfileViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.create(CustomTextFieldTableViewCell.self, indexPath)
-   
+        
         cell.infoTextField.delegate = self
         cell.infoTextField.tag = countTags
         countTags += 1
@@ -142,7 +130,7 @@ extension ProfileViewController: UITableViewDataSource {
             switch  type {
             case .firstName:
                 cell.fillLabel(infoLabel: "First Name", isPassword: false)
-             case .secondName:
+            case .secondName:
                 cell.fillLabel(infoLabel: "second Name", isPassword: false)
             case .emailAdress:
                 cell.fillLabel(infoLabel: "email Adress", isPassword: false)
@@ -164,9 +152,6 @@ extension ProfileViewController: UITableViewDataSource {
                 let cell = tableView.create(ButtonTableViewCell.self, indexPath)
                 return cell
             }
-            
-            
-     
             return cell
         }
     }
@@ -177,11 +162,8 @@ extension ProfileViewController: UITableViewDataSource {
 extension ProfileViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-      
-        
         if let nextTextField = self.tableView.viewWithTag(textField.tag + 1) as? UITextField {
-
+            
             nextTextField.becomeFirstResponder()
             NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
             NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -191,8 +173,6 @@ extension ProfileViewController: UITextFieldDelegate {
             textField.resignFirstResponder()
         }
         
-        
-       
         countTF += 1
         return true
         
