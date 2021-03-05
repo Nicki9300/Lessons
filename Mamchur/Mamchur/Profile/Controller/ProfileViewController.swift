@@ -13,11 +13,17 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileTableView: UITableView!
     @IBOutlet weak var updateProfilePictureButton: UIButton!
     @IBOutlet weak var largeButton: UIButton!
+<<<<<<< Updated upstream
     
      //MARK: Properties
     private let arrayOfInfoLabel = ["First name", "Second name", "Mobile number", "email adress"]
     private let arrayOfPasswordLabel = ["new password", "change password"]
     private let arrayOfHeaderLabel = ["Your info", "Change Password"]
+=======
+    @IBOutlet weak var tableView: UITableView!
+    
+    //MARK: Properties
+>>>>>>> Stashed changes
     private var timer: Timer?
     
      // MARK: - Lifecycle
