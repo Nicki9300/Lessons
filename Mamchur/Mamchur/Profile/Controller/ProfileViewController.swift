@@ -6,15 +6,15 @@
 //
 
 import UIKit
-import NotificationCenter
 
 class ProfileViewController: UIViewController {
     
-    // MARK: - IBOutlets
-    
+     // MARK: - IBOutlets
+    @IBOutlet weak var profileTableView: UITableView!
     @IBOutlet weak var updateProfilePictureButton: UIButton!
     @IBOutlet weak var largeButton: UIButton!
     
+<<<<<<< HEAD
     @IBOutlet weak var tableView: UITableView!
     
     //MARK: Properties
@@ -43,21 +43,36 @@ class ProfileViewController: UIViewController {
     
     func rounding() {
         
+=======
+     //MARK: Properties
+    private let arrayOfInfoLabel = ["First name", "Second name", "Mobile number", "email adress"]
+    private let arrayOfPasswordLabel = ["new password", "change password"]
+    private let arrayOfHeaderLabel = ["Your info", "Change Password"]
+    private var timer: Timer?
+    
+     // MARK: - Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+>>>>>>> parent of cbcfdb8 (Switching TextField)
         updateProfilePictureButton.layer.cornerRadius = updateProfilePictureButton.layer.frame.height / 2
         updateProfilePictureButton.layer.borderWidth = 3
         updateProfilePictureButton.layer.borderColor = UIColor(named: "BorderButtonColor")?.cgColor
         
+<<<<<<< HEAD
     }
     
     // MARK: - Actions
     @objc func longPress(gesture: UILongPressGestureRecognizer) {
+=======
+        profileTableView.dataSource = self
+        profileTableView.delegate = self
+>>>>>>> parent of cbcfdb8 (Switching TextField)
         
-        if gesture.state == .began {
-            timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { (_) in
-                self.largeButton.setImage(UIImage(named: "windows2"), for: .normal)
-            }
-        }
+        profileTableView.register(CustomTextFieldTableViewCell.self)
+        profileTableView.register(ButtonTableViewCell.self)
         
+<<<<<<< HEAD
         if gesture.state == .ended {
             self.largeButton.setImage(UIImage(named: "windows"), for: .normal)
             timer?.invalidate()
@@ -81,42 +96,47 @@ class ProfileViewController: UIViewController {
     
 }
 
+=======
+        
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(self.longPress(gesture:)))
+        longPress.minimumPressDuration = 0
+        largeButton.addGestureRecognizer(longPress)
+>>>>>>> parent of cbcfdb8 (Switching TextField)
 
-extension ProfileViewController: UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        
-        return 50
-        
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header: HeaderTableViewCell = .fromNib()
-        if section == 0 {
-            header.headerLabel.text = "INFO LABEL"
-        } else {
-            header.headerLabel.text = "CHANGE PASSWORD"
+     // MARK: - Actions
+    @objc func longPress(gesture: UILongPressGestureRecognizer) {
             
+            if gesture.state == .began {
+                timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { (_) in
+                    self.largeButton.setImage(UIImage(named: "windows2"), for: .normal)
+                }
+            }
+            
+            if gesture.state == .ended {
+                self.largeButton.setImage(UIImage(named: "windows"), for: .normal)
+                timer?.invalidate()
+            }
         }
-        return header
-    }
-    
+        
+      
 }
 
 extension ProfileViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return EnumFirstSection.allCases.count
-        } else {
-            return EnumSecondSection.allCases.count
-        }
-    }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if section == 0 {
+            return arrayOfInfoLabel.count
+        }  else {
+            return arrayOfHeaderLabel.count + 1
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+<<<<<<< HEAD
         let cell = tableView.create(CustomTextFieldTableViewCell.self, indexPath)
         
         cell.infoTextField.delegate = self
@@ -152,15 +172,28 @@ extension ProfileViewController: UITableViewDataSource {
                 let cell = tableView.create(ButtonTableViewCell.self, indexPath)
                 return cell
             }
+=======
+        if indexPath.section == arrayOfHeaderLabel.count - 1 && indexPath.row == arrayOfPasswordLabel.count {
+            let cell = tableView.create(ButtonTableViewCell.self, indexPath)
+            return cell
+        } else {
+            let cell = tableView.create(CustomTextFieldTableViewCell.self, indexPath)
+           
+            if indexPath.section == 0 {
+                cell.filllabel(infoLabel: arrayOfInfoLabel[indexPath.row], isPassword: false)
+            } else {
+                cell.filllabel(infoLabel: arrayOfPasswordLabel[indexPath.row], isPassword: true)
+             }
+>>>>>>> parent of cbcfdb8 (Switching TextField)
             return cell
         }
     }
-    
+
 }
 
-
-extension ProfileViewController: UITextFieldDelegate {
+extension ProfileViewController: UITableViewDelegate {
     
+<<<<<<< HEAD
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let nextTextField = self.tableView.viewWithTag(textField.tag + 1) as? UITextField {
             
@@ -175,8 +208,21 @@ extension ProfileViewController: UITextFieldDelegate {
         
         countTF += 1
         return true
-        
-        
+=======
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return arrayOfHeaderLabel.count
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header: HeaderView = .fromNib()
+        header.fillHeaderLabel(headerLabel: arrayOfHeaderLabel[section])
+>>>>>>> parent of cbcfdb8 (Switching TextField)
+        
+        return header
+        
+    }
 }

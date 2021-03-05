@@ -23,6 +23,7 @@
 		EB49CEAA25E9149D000276F5 /* UiView(extension).swift in Sources */ = {isa = PBXBuildFile; fileRef = EB49CEA925E9149D000276F5 /* UiView(extension).swift */; };
 		EB49CEAE25E914C7000276F5 /* UITableView(extension).swift in Sources */ = {isa = PBXBuildFile; fileRef = EB49CEAD25E914C7000276F5 /* UITableView(extension).swift */; };
 		EB49CEB125E91E60000276F5 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB49CEB025E91E60000276F5 /* UserData.swift */; };
+<<<<<<< HEAD
 		EB65904525EFE59D00DEA03E /* Secitons.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB65904425EFE59D00DEA03E /* Secitons.swift */; };
 		EB86A36A25F10BE1006655CD /* UitextField(extension).swift in Sources */ = {isa = PBXBuildFile; fileRef = EB86A36925F10BE1006655CD /* UitextField(extension).swift */; };
 		EBA3635725EFE98E0033A05D /* CustomTextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA3634F25EFE98E0033A05D /* CustomTextFieldTableViewCell.swift */; };
@@ -31,8 +32,16 @@
 		EBA3635A25EFE98E0033A05D /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA3635425EFE98E0033A05D /* ButtonTableViewCell.swift */; };
 		EBA3635B25EFE98E0033A05D /* CustomTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBA3635525EFE98E0033A05D /* CustomTextFieldTableViewCell.xib */; };
 		EBA3635C25EFE98E0033A05D /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA3635625EFE98E0033A05D /* HeaderTableViewCell.swift */; };
+=======
+>>>>>>> parent of cbcfdb8 (Switching TextField)
 		EBF231CE25ECEF0800F05049 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBF231CD25ECEF0800F05049 /* Profile.storyboard */; };
+		EBF231DC25ECFE2700F05049 /* CustomTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF231DA25ECFE2700F05049 /* CustomTextFieldTableViewCell.xib */; };
+		EBF231DD25ECFE2700F05049 /* CustomTextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF231DB25ECFE2700F05049 /* CustomTextFieldTableViewCell.swift */; };
 		EBF231E925ED05FD00F05049 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF231E825ED05FD00F05049 /* ProfileViewController.swift */; };
+		EBF231EE25ED089400F05049 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF231EC25ED089400F05049 /* HeaderView.swift */; };
+		EBF231EF25ED089400F05049 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF231ED25ED089400F05049 /* HeaderView.xib */; };
+		EBF231F525ED1F1E00F05049 /* ButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBF231F325ED1F1E00F05049 /* ButtonTableViewCell.xib */; };
+		EBF231F625ED1F1E00F05049 /* ButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF231F425ED1F1E00F05049 /* ButtonTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +63,7 @@
 		EB49CEA925E9149D000276F5 /* UiView(extension).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiView(extension).swift"; sourceTree = "<group>"; };
 		EB49CEAD25E914C7000276F5 /* UITableView(extension).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView(extension).swift"; sourceTree = "<group>"; };
 		EB49CEB025E91E60000276F5 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		EB65904425EFE59D00DEA03E /* Secitons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secitons.swift; sourceTree = "<group>"; };
 		EB86A36925F10BE1006655CD /* UitextField(extension).swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UitextField(extension).swift"; sourceTree = "<group>"; };
 		EBA3634F25EFE98E0033A05D /* CustomTextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextFieldTableViewCell.swift; sourceTree = "<group>"; };
@@ -62,8 +72,16 @@
 		EBA3635425EFE98E0033A05D /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 		EBA3635525EFE98E0033A05D /* CustomTextFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		EBA3635625EFE98E0033A05D /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+=======
+>>>>>>> parent of cbcfdb8 (Switching TextField)
 		EBF231CD25ECEF0800F05049 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		EBF231DA25ECFE2700F05049 /* CustomTextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTextFieldTableViewCell.xib; sourceTree = "<group>"; };
+		EBF231DB25ECFE2700F05049 /* CustomTextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		EBF231E825ED05FD00F05049 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		EBF231EC25ED089400F05049 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		EBF231ED25ED089400F05049 /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		EBF231F325ED1F1E00F05049 /* ButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonTableViewCell.xib; sourceTree = "<group>"; };
+		EBF231F425ED1F1E00F05049 /* ButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +206,7 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		EBA3634E25EFE98E0033A05D /* CustomTextField */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +244,8 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+=======
+>>>>>>> parent of cbcfdb8 (Switching TextField)
 		EBE9751A25E92FFA00CD4265 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,7 +302,6 @@
 		EBF231CA25ECEEB900F05049 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EB65904425EFE59D00DEA03E /* Secitons.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -289,8 +309,10 @@
 		EBF231CB25ECEEC000F05049 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EBA3635F25EFE9CB0033A05D /* Cells */,
 				EBF231CD25ECEF0800F05049 /* Profile.storyboard */,
+				EBF231E025ED049F00F05049 /* Header */,
+				EBF231D125ECFB0E00F05049 /* CustomTextField */,
+				EBF231F225ED1F0900F05049 /* ButtonTableViewCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -301,6 +323,33 @@
 				EBF231E825ED05FD00F05049 /* ProfileViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		EBF231D125ECFB0E00F05049 /* CustomTextField */ = {
+			isa = PBXGroup;
+			children = (
+				EBF231DB25ECFE2700F05049 /* CustomTextFieldTableViewCell.swift */,
+				EBF231DA25ECFE2700F05049 /* CustomTextFieldTableViewCell.xib */,
+			);
+			path = CustomTextField;
+			sourceTree = "<group>";
+		};
+		EBF231E025ED049F00F05049 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				EBF231EC25ED089400F05049 /* HeaderView.swift */,
+				EBF231ED25ED089400F05049 /* HeaderView.xib */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		EBF231F225ED1F0900F05049 /* ButtonTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				EBF231F425ED1F1E00F05049 /* ButtonTableViewCell.swift */,
+				EBF231F325ED1F1E00F05049 /* ButtonTableViewCell.xib */,
+			);
+			path = ButtonTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,15 +409,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBA3635B25EFE98E0033A05D /* CustomTextFieldTableViewCell.xib in Resources */,
 				EB49CE7A25E91220000276F5 /* LaunchScreen.storyboard in Resources */,
-				EBA3635825EFE98E0033A05D /* HeaderTableViewCell.xib in Resources */,
+				EBF231EF25ED089400F05049 /* HeaderView.xib in Resources */,
 				EB49CE9725E913FE000276F5 /* WithGreenImageTableViewCell.xib in Resources */,
 				EBF231CE25ECEF0800F05049 /* Profile.storyboard in Resources */,
 				EB49CE9225E913F4000276F5 /* SimpleTableViewCell.xib in Resources */,
 				EB49CE8B25E912B4000276F5 /* Colors.xcassets in Resources */,
+				EBF231DC25ECFE2700F05049 /* CustomTextFieldTableViewCell.xib in Resources */,
 				EB49CE7725E91220000276F5 /* Image.xcassets in Resources */,
-				EBA3635925EFE98E0033A05D /* ButtonTableViewCell.xib in Resources */,
+				EBF231F525ED1F1E00F05049 /* ButtonTableViewCell.xib in Resources */,
 				EB49CE7525E91220000276F5 /* Wall.storyboard in Resources */,
 				EB49CE9C25E91404000276F5 /* LargeImageTableViewCell.xib in Resources */,
 			);
@@ -381,17 +430,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBA3635725EFE98E0033A05D /* CustomTextFieldTableViewCell.swift in Sources */,
+				EBF231DD25ECFE2700F05049 /* CustomTextFieldTableViewCell.swift in Sources */,
 				EB49CE7225E91220000276F5 /* WallViewController.swift in Sources */,
-				EBA3635A25EFE98E0033A05D /* ButtonTableViewCell.swift in Sources */,
-				EB65904525EFE59D00DEA03E /* Secitons.swift in Sources */,
+				EBF231F625ED1F1E00F05049 /* ButtonTableViewCell.swift in Sources */,
 				EB49CE9B25E91404000276F5 /* LargeImageTableViewCell.swift in Sources */,
 				EB49CE9125E913F4000276F5 /* SimpleTableViewCell.swift in Sources */,
 				EB49CEB125E91E60000276F5 /* UserData.swift in Sources */,
 				EBF231E925ED05FD00F05049 /* ProfileViewController.swift in Sources */,
 				EB49CE6E25E91220000276F5 /* AppDelegate.swift in Sources */,
+				EBF231EE25ED089400F05049 /* HeaderView.swift in Sources */,
 				EB49CE9625E913FE000276F5 /* WithGreenImageTableViewCell.swift in Sources */,
-				EBA3635C25EFE98E0033A05D /* HeaderTableViewCell.swift in Sources */,
 				EB49CEAA25E9149D000276F5 /* UiView(extension).swift in Sources */,
 				EB86A36A25F10BE1006655CD /* UitextField(extension).swift in Sources */,
 				EB49CEAE25E914C7000276F5 /* UITableView(extension).swift in Sources */,
