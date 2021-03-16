@@ -2,10 +2,11 @@
 //  AppDelegate.swift
 //  Mamchur
 //
-//  Created by Коля Мамчур on 26.02.2021.
+//  Created by Kolya Mamchur on 26.02.2021.
 //
 
 import UIKit
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,9 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+       
         return true
+        
     }
+    
+  
 
     // MARK: UISceneSession Lifecycle
 

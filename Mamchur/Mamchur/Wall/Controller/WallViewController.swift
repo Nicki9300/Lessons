@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Mamchur
 //
-//  Created by Коля Мамчур on 26.02.2021.
+//  Created by Kolya Mamchur on 26.02.2021.
 //
 
 import UIKit

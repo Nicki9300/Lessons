@@ -24,10 +24,6 @@
                                 </constraints>
                                 <state key="normal" image="windows"/>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wED-DN-R2n">
-                                <rect key="frame" x="0.0" y="270" width="414" height="592"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3J-3J-yua">
                                 <rect key="frame" x="40" y="200" width="334" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -45,19 +41,23 @@
                                     <constraint firstAttribute="width" constant="100" id="0yT-PF-fdq"/>
                                 </constraints>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z5g-eG-XYH">
+                                <rect key="frame" x="0.0" y="270" width="414" height="592"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ijd-2h-iuX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Z5g-eG-XYH" firstAttribute="leading" secondItem="ijd-2h-iuX" secondAttribute="leading" id="2Pv-hT-OtX"/>
+                            <constraint firstItem="ijd-2h-iuX" firstAttribute="bottom" secondItem="Z5g-eG-XYH" secondAttribute="bottom" id="5R9-2C-UjG"/>
                             <constraint firstItem="isW-ur-caJ" firstAttribute="centerY" secondItem="nW4-qv-3tC" secondAttribute="centerY" id="7Zu-aB-hv2"/>
-                            <constraint firstItem="ijd-2h-iuX" firstAttribute="trailing" secondItem="wED-DN-R2n" secondAttribute="trailing" id="8WJ-Qt-Qgd"/>
                             <constraint firstItem="isW-ur-caJ" firstAttribute="centerX" secondItem="nW4-qv-3tC" secondAttribute="centerX" id="DcD-nL-kB5"/>
-                            <constraint firstItem="wED-DN-R2n" firstAttribute="leading" secondItem="ijd-2h-iuX" secondAttribute="leading" id="Eo8-Qk-v4z"/>
                             <constraint firstItem="nW4-qv-3tC" firstAttribute="top" secondItem="A0J-1M-dGe" secondAttribute="top" id="Eyi-Zn-j40"/>
-                            <constraint firstItem="ijd-2h-iuX" firstAttribute="bottom" secondItem="wED-DN-R2n" secondAttribute="bottom" id="I0c-IO-2FQ"/>
-                            <constraint firstItem="wED-DN-R2n" firstAttribute="top" secondItem="o3J-3J-yua" secondAttribute="bottom" constant="30" id="R7S-Hb-wTX"/>
-                            <constraint firstItem="wED-DN-R2n" firstAttribute="top" secondItem="nW4-qv-3tC" secondAttribute="bottom" id="Xqw-uE-CqZ"/>
+                            <constraint firstItem="o3J-3J-yua" firstAttribute="top" secondItem="nW4-qv-3tC" secondAttribute="bottom" constant="-70" id="W4V-TV-bg7"/>
                             <constraint firstItem="nW4-qv-3tC" firstAttribute="leading" secondItem="ijd-2h-iuX" secondAttribute="leading" id="bkP-8T-Fmt"/>
+                            <constraint firstItem="ijd-2h-iuX" firstAttribute="trailing" secondItem="Z5g-eG-XYH" secondAttribute="trailing" id="e0n-h3-gMJ"/>
+                            <constraint firstItem="Z5g-eG-XYH" firstAttribute="top" secondItem="nW4-qv-3tC" secondAttribute="bottom" id="hrl-7C-BV4"/>
                             <constraint firstItem="ijd-2h-iuX" firstAttribute="trailing" secondItem="o3J-3J-yua" secondAttribute="trailing" constant="40" id="iy7-zU-k8c"/>
                             <constraint firstItem="o3J-3J-yua" firstAttribute="leading" secondItem="ijd-2h-iuX" secondAttribute="leading" constant="40" id="mav-WH-s8s"/>
                             <constraint firstItem="ijd-2h-iuX" firstAttribute="trailing" secondItem="nW4-qv-3tC" secondAttribute="trailing" id="mo5-Cp-BHX"/>
@@ -65,7 +65,7 @@
                     </view>
                     <connections>
                         <outlet property="largeButton" destination="nW4-qv-3tC" id="g85-ZW-eGj"/>
-                        <outlet property="profileTableView" destination="wED-DN-R2n" id="3Tn-b6-iCe"/>
+                        <outlet property="tableView" destination="Z5g-eG-XYH" id="wGf-iX-FAX"/>
                         <outlet property="updateProfilePictureButton" destination="o3J-3J-yua" id="Xcv-7i-843"/>
                     </connections>
                 </viewController>
