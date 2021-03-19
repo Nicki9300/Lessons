@@ -2,36 +2,36 @@
 //  CustomTextFieldTableViewCell.swift
 //  Mamchur
 //
-//  Created by Kolya Mamchur on 01.03.2021.
+//  Created by Коля Мамчур on 01.03.2021.
 //
 
 import UIKit
 
 class CustomTextFieldTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var userInfoLabel: UILabel!
-    @IBOutlet weak var userInfoTextField: UITextField!
+    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var infoTextField: UITextField!
     
-    private var countTextField = 0
+    private var countTF = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        userInfoTextField.delegate = self
+        infoTextField.delegate = self
         
-        userInfoTextField.returnKeyType = .next
-        userInfoTextField.autocorrectionType = .no
+        infoTextField.returnKeyType = .next
+        infoTextField.autocorrectionType = .no
      }
     
     func fillLabel(infoLabel: String, isPassword: Bool) {
         
-        self.userInfoLabel.text = infoLabel.uppercased()
+        self.infoLabel.text = infoLabel.uppercased()
         
         if isPassword{
-            userInfoTextField.textContentType = .oneTimeCode
+            infoTextField.textContentType = .oneTimeCode
             
         } else {
-            userInfoTextField.isSecureTextEntry = false
+            infoTextField.isSecureTextEntry = false
         }
     }
 
@@ -54,13 +54,13 @@ extension CustomTextFieldTableViewCell: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
        
         
-        if let nextField = textField.superview?.viewWithTag(countTextField + 1) as? UITextField {
+        if let nextField = textField.superview?.viewWithTag(countTF + 1) as? UITextField {
             nextField.becomeFirstResponder()
         } else {
             
             textField.resignFirstResponder()
         }
-        countTextField += 1
+        countTF += 1
         return false
         
         

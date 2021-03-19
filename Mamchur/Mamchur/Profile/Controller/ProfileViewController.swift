@@ -2,7 +2,7 @@
 //  ProfileViewController.swift
 //  Mamchur
 //
-//  Created by Kolya Mamchur on 01.03.2021.
+//  Created by Коля Мамчур on 01.03.2021.
 //
 
 import UIKit
@@ -11,13 +11,16 @@ import NotificationCenter
 class ProfileViewController: UIViewController {
     
     // MARK: - IBOutlets
+    
     @IBOutlet weak var updateProfilePictureButton: UIButton!
     @IBOutlet weak var largeButton: UIButton!
+    
     @IBOutlet weak var tableView: UITableView!
     
     //MARK: Properties
     private var timer: Timer?
     private var countTags = 0
+    private var countTF = 1
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -28,6 +31,7 @@ class ProfileViewController: UIViewController {
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(self.longPress(gesture:)))
         longPress.minimumPressDuration = 0
         largeButton.addGestureRecognizer(longPress)
+        
         
         tableView.register(CustomTextFieldTableViewCell.self)
         tableView.register(ButtonTableViewCell.self)
@@ -72,20 +76,28 @@ class ProfileViewController: UIViewController {
         if view.frame.origin.y != 0 {
             self.view.frame.origin.y = 0
         }
+        
     }
+    
 }
+
 
 extension ProfileViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         
         return 50
+        
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header: HeaderTableViewCell = .fromNib()
-        
-        header.headerLabel.text = section == 0 ? "INFO LABEL" : "CHANGE PASSWORD"
+        if section == 0 {
+            header.headerLabel.text = "INFO LABEL"
+        } else {
+            header.headerLabel.text = "CHANGE PASSWORD"
+            
+        }
         return header
     }
     
@@ -93,23 +105,25 @@ extension ProfileViewController: UITableViewDelegate {
 
 extension ProfileViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return section == 0 ? EnumFirstSection.allCases.count :  EnumSecondSection.allCases.count
+        if section == 0 {
+            return EnumFirstSection.allCases.count
+        } else {
+            return EnumSecondSection.allCases.count
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return EnumOfSections.allCases.count
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.create(CustomTextFieldTableViewCell.self, indexPath)
         
-        cell.userInfoTextField.delegate = self
-        cell.userInfoTextField.tag = countTags
+        cell.infoTextField.delegate = self
+        cell.infoTextField.tag = countTags
         countTags += 1
         
-        
-        if indexPath.section == EnumOfSections.enumFirstSection.rawValue {
+        if indexPath.section == 0 {
             guard let type = EnumFirstSection.init(rawValue: indexPath.row) else {
                 return UITableViewCell()
             }
@@ -124,7 +138,7 @@ extension ProfileViewController: UITableViewDataSource {
                 cell.fillLabel(infoLabel: "mobile Number", isPassword: false)
             }
             return cell
-        } else if indexPath.section == EnumOfSections.enumSecondSection.rawValue {
+        } else {
             guard let type = EnumSecondSection.init(rawValue: indexPath.row) else {
                 return UITableViewCell()
             }
@@ -139,12 +153,11 @@ extension ProfileViewController: UITableViewDataSource {
                 return cell
             }
             return cell
-        } else {
-            return UITableViewCell()
         }
     }
     
 }
+
 
 extension ProfileViewController: UITextFieldDelegate {
     
@@ -159,6 +172,8 @@ extension ProfileViewController: UITextFieldDelegate {
             
             textField.resignFirstResponder()
         }
+        
+        countTF += 1
         return true
         
         

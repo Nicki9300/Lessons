@@ -57,8 +57,8 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="userInfoLabel" destination="U0R-Fr-bHu" id="EaD-Ca-fKI"/>
-                <outlet property="userInfoTextField" destination="g8R-vi-SRP" id="PDG-s9-9Gy"/>
+                <outlet property="infoLabel" destination="U0R-Fr-bHu" id="EaD-Ca-fKI"/>
+                <outlet property="infoTextField" destination="g8R-vi-SRP" id="PDG-s9-9Gy"/>
             </connections>
             <point key="canvasLocation" x="148.55072463768118" y="131.58482142857142"/>
         </tableViewCell>

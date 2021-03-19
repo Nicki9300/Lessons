@@ -2,7 +2,7 @@
 //  HeaderTableViewCell.swift
 //  SomeTable
 //
-//  Created by Kolya Mamchur on 03.03.2021.
+//  Created by Коля Мамчур on 03.03.2021.
 //
 
 import UIKit
@@ -17,15 +17,24 @@ class HeaderTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-     
+        
+        resetContent()
+        setupView()
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         
-    
+        resetContent()
     }
-
+     
+    private func resetContent() {
+      
+    }
+    
+    private func setupView() {
+        
+    }
     
 }
 

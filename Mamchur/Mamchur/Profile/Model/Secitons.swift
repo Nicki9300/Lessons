@@ -2,7 +2,7 @@
 //  Secitons.swift
 //  Mamchur
 //
-//  Created by Kolya Mamchur on 03.03.2021.
+//  Created by Коля Мамчур on 03.03.2021.
 //
 
 
@@ -17,10 +17,4 @@ enum EnumSecondSection: Int, CaseIterable {
     case newPassword
     case retypeNewPassword
     case button
-}
-
-enum EnumOfSections: Int, CaseIterable {
-    
-    case enumFirstSection
-    case enumSecondSection
 }

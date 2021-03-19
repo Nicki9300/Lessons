@@ -2,7 +2,7 @@
 //  WithGreenImageTableViewCell.swift
 //  MamchurKolya
 //
-//  Created by Kolya Mamchur on 22.02.2021.
+//  Created by Коля Мамчур on 22.02.2021.
 //
 
 import UIKit
