@@ -2,7 +2,11 @@
 //  UITextField(extension).swift
 //  Mamchur
 //
+<<<<<<< Updated upstream
 //  Created by Коля Мамчур on 04.03.2021.
+=======
+//  Created by Kolya Mamchur on 04.03.2021.
+>>>>>>> Stashed changes
 //
 
 import UIKit
