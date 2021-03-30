@@ -30,8 +30,8 @@ class ScannerORCodeViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        setupCamera()
-        startRunning()
+//        setupCamera()
+//        startRunning()
         helperViewForMyCodeTab.isHidden = true
         
     }
