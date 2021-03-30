@@ -32,8 +32,9 @@ class LoginViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-//        KeychainService.removePassword(service: service, account: userEmail)
-//        KeychainService.removePassword(service: service, account: userPassword)
+//        KeychainService.removeData(service: service, account: userEmail)
+//        KeychainService.removeData(service: service, account: userPassword)
+        
         checkSavedPasswordInLeychain()
        
         configurateFacebookButton()
@@ -147,13 +148,26 @@ class LoginViewController: UIViewController {
                 
                 KeychainService.saveData(service: service, for: userEmail, data: email)
                 KeychainService.saveData(service: service, for: userPassword, data: password)
-                
-                //                self.navigationController?.isNavigationBarHidden = true
-                let secondViewController = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "LoginHelperViewController") as! LoginHelperViewController
+
+                let secondViewController = UIStoryboard(name: "ScannerQRCode", bundle: nil).instantiateViewController(withIdentifier: "ScannerORCodeViewController") as! ScannerORCodeViewController
                 DispatchQueue.main.async {
                     self.navigationController?.pushViewController(secondViewController, animated: true)
                     
                 }
+            }
+            
+        } else {
+            checkSavedPasswordInLeychain()
+            if credentials.email != "" && credentials.password != "" {
+                enableTouchID()
+            } else {
+                let alertController = UIAlertController(title: "Not filled", message: "Please enter email and password", preferredStyle: .alert)
+                let actionOk = UIAlertAction(title: "OK", style: .default, handler: nil)
+               
+                alertController.addAction(actionOk)
+
+                present(alertController, animated: true)
+                
             }
             
         }
