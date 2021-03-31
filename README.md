@@ -1,6 +1,6 @@
 
 # Authorization screen: 
-Sign in with facebook, sign in with apple ID, touch ID, which saved your password in KeyChain
+Sign in with facebook, sign in with apple ID, password and email saving to keichane and unloading when using Touch ID
 # Screen of Scan QR code  through the Camera 
 Save Pictures in Gallery or Save Pictures onto Gallery Album with Application name
 # Update profile screen:
